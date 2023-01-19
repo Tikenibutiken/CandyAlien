@@ -790,11 +790,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e2b130748f266694c8d8d1c8cc9b83d0, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!4 &687791807
 Transform:
   m_ObjectHideFlags: 0
@@ -831,7 +831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2434427154106997260, guid: 9481b0489906d514a8ec12aa10ac201f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.89
+      value: -13.44
       objectReference: {fileID: 0}
     - target: {fileID: 2434427154106997260, guid: 9481b0489906d514a8ec12aa10ac201f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1331,7 +1331,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5d56a52511efd7c4cac5b543a9498fae, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
