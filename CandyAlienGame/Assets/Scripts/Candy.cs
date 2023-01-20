@@ -10,6 +10,7 @@ public class Candy : MonoBehaviour
             if (collider2D.gameObject.CompareTag("Coin"))
             {
                 Destroy(collider2D.gameObject);
+            
             }
         
 
