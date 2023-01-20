@@ -11,6 +11,7 @@ public class CandyCollector : MonoBehaviour
         {
             Destroy(collider2D.gameObject);
         }
+
     }
 
 
