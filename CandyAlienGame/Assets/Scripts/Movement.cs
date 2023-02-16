@@ -111,6 +111,10 @@ public class Movement : MonoBehaviour
             if (Input.GetButtonDown("Jump") && isTouchingGround)
             {
                 player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+          
+            
+            
+            
             }
         }
 
