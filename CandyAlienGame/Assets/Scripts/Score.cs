@@ -7,7 +7,7 @@ public class Score : MonoBehaviour
 {
     public static Score instance;
     public Text scoreText;
-
+    public int CandyMeter;
     int score = 0;
     private void Awake()
     {
@@ -24,7 +24,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        int Score = CandyMeter;
     }
     public void AddPoint() {
         score += 1;
