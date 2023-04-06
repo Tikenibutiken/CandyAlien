@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-
-public class Movement : MonoBehaviour
+public class Anim2 : MonoBehaviour
 {
-
     public Rigidbody2D rb;
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     public Animator SlimeBob_5;
     public Animator Stage2;
-
-
-
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -25,6 +20,7 @@ public class Movement : MonoBehaviour
     enum MovementState { idle, running, jumping, falling }
 
     [SerializeField] private AudioSource jumpSoundEffect;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -33,12 +29,17 @@ public class Movement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         SlimeBob_5 = GetComponent<Animator>();
 
+        // Rename Animator controllers method names to avoid naming conflicts
+        Stage2.SetFloat("MoveSpeed", 0);
+        Stage2.SetFloat("JumpSpeed", 0);
+        Stage2.SetFloat("VerticalSpeed", 0);
     }
-    private void Update()
+
+    private void FixedUpdate()
     {
         Move();
     }
-    // Update is called once per frame
+
     private void Move()
     {
         dirX = Input.GetAxisRaw("Horizontal");
@@ -52,12 +53,10 @@ public class Movement : MonoBehaviour
         }
 
         //Animation
-        if(dirX != 0)
+        if (dirX != 0)
             SlimeBob_5.SetBool("is_walking", true);
-        else 
+        else
             SlimeBob_5.SetBool("is_walking", false);
-
-       
 
         //Sprite Flipping
         if (dirX == -1)
@@ -68,64 +67,39 @@ public class Movement : MonoBehaviour
         {
             sprite.flipX = false;
         }
-
     }
-
 
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
+}
 
+public class AnimatorController : MonoBehaviour
+{
+    public Animator SlimeBob_5;
+    public Animator Stage2;
 
+    [SerializeField] private Movement movementScript;
 
-    public class PlayerController : MonoBehaviour
+    // Start is called before the first frame update
+    void Start()
     {
-        public float speed = 5f;
-        public float jumpSpeed = 8f;
-        private float direction = 0f;
-        private Rigidbody2D player;
+        // Rename Movement script method names to avoid naming conflicts
+        movementScript.Stage2 = Stage2;
+        movementScript.SlimeBob_5 = SlimeBob_5;
+        Stage2.SetFloat("MoveSpeed", 0);
+        Stage2.SetFloat("JumpSpeed", 0);
+        Stage2.SetFloat("VerticalSpeed", 0);
+    }
 
-        public Transform groundCheck;
-        public float groundCheckRadius;
-        public LayerMask groundLayer;
-        private bool isTouchingGround;
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            player = GetComponent<Rigidbody2D>();
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-            direction = Input.GetAxis("Horizontal");
-
-            if (direction > 0f)
-            {
-                player.velocity = new Vector2(direction * speed, player.velocity.y);
-            }
-            else if (direction < 0f)
-            {
-                player.velocity = new Vector2(direction * speed, player.velocity.y);
-            }
-            else
-            {
-                player.velocity = new Vector2(0, player.velocity.y);
-            }
-
-            if (Input.GetButtonDown("Jump") && isTouchingGround)
-            {
-                player.velocity = new Vector2(player.velocity.x, jumpSpeed);
-          
-            
-            
-            
-            }
-        }
-
-
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        float moveSpeed = Input.GetAxisRaw("Horizontal");
+        float jumpSpeed = Input.GetAxisRaw("Jump");
+        Stage2.SetFloat("MoveSpeed", Mathf.Abs(moveSpeed));
+        Stage2.SetFloat("JumpSpeed", jumpSpeed);
+        Stage2.SetFloat("VerticalSpeed", movementScript.rb.velocity.y);
     }
 }

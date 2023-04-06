@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06004ab250d83094cb28df1628c9ae4b
+guid: 748ea78b94b413e478a5af9cda462c19
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,97 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fires_0
+      name: Slime Steve Walking_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 92
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07793283a0168eb4a9c70f85e5da0f96
+      internalID: -1803640426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Steve Walking_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 92
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76abce03a78220a479572f443a30a5fb
+      internalID: 137392305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Steve Walking_2
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 52
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b6ae4bd3b15324a99a6b8f48a0362e
+      internalID: -229176968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Steve Walking_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 52
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ddfaca382042d14aab25b6f88d35f4f
+      internalID: 1437773271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Steve Walking_4
       rect:
         serializedVersion: 2
         x: 9
-        y: 204
-        width: 78
-        height: 94
+        y: 12
+        width: 23
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,92 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c26cf2777daefc41bfc69a38b173ab6
-      internalID: -214650230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fires_3
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 196
-        width: 57
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ee459b109d2a3a458b4f8c3f9aec84d
-      internalID: 1591299374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fires_6
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 104
-        width: 66
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6fced85a03777804db83e7d49e6c654c
-      internalID: -1545907034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fires_8
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 104
-        width: 57
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e22adf2af4c8557428f91569e9afa93e
-      internalID: 1609041029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fires_11
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 4
-        width: 72
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66f768db643f15447bbab5b8a3592a53
-      internalID: -1388155319
+      spriteID: a51d72cdc1132664ba5a9486f2ef08b0
+      internalID: -1872537258
       vertices: []
       indices: 
       edges: []
@@ -220,18 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      fires_10: -2004451183
-      fires_1: 1331493603
-      fires_3: 1591299374
-      fires_11: -1388155319
-      fires_7: -1430847876
-      fires_9: -1325557391
-      fires_4: 1826382715
-      fires_6: -1545907034
-      fires_8: 1609041029
-      fires_0: -214650230
-      fires_2: 1123956717
-      fires_5: -619058750
+      Slime Steve Walking_2: -229176968
+      Slime Steve Walking_1: 137392305
+      Slime Steve Walking_3: 1437773271
+      Slime Steve Walking_4: -1872537258
+      Slime Steve Walking_0: -1803640426
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
